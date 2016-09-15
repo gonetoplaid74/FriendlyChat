@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignInVC.swift
 //  FriendlyChat
 //
 //  Created by AW on 15/09/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

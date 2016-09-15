@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8498A5C94F73A003C9E116C4 /* Pods_FriendlyChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BE34B24611BF9F0B301D34 /* Pods_FriendlyChat.framework */; };
 		C210F06F1D8ADD0D00C742C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C210F06E1D8ADD0D00C742C2 /* AppDelegate.swift */; };
-		C210F0711D8ADD0D00C742C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C210F0701D8ADD0D00C742C2 /* ViewController.swift */; };
+		C210F0711D8ADD0D00C742C2 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C210F0701D8ADD0D00C742C2 /* SignInVC.swift */; };
 		C210F0741D8ADD0D00C742C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C210F0721D8ADD0D00C742C2 /* Main.storyboard */; };
 		C210F0761D8ADD0D00C742C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C210F0751D8ADD0D00C742C2 /* Assets.xcassets */; };
 		C210F0791D8ADD0D00C742C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C210F0771D8ADD0D00C742C2 /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		5E4637301E412CDD1464879E /* Pods-FriendlyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendlyChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendlyChat/Pods-FriendlyChat.release.xcconfig"; sourceTree = "<group>"; };
 		C210F06B1D8ADD0D00C742C2 /* FriendlyChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendlyChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C210F06E1D8ADD0D00C742C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C210F0701D8ADD0D00C742C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C210F0701D8ADD0D00C742C2 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		C210F0731D8ADD0D00C742C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C210F0751D8ADD0D00C742C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C210F0781D8ADD0D00C742C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,15 +80,31 @@
 		C210F06D1D8ADD0D00C742C2 /* FriendlyChat */ = {
 			isa = PBXGroup;
 			children = (
+				C2D41E781D8AF5D400F42C88 /* Controller */,
+				C2D41E771D8AF5C500F42C88 /* Model */,
 				C210F0801D8ADD6600C742C2 /* GoogleService-Info.plist */,
 				C210F06E1D8ADD0D00C742C2 /* AppDelegate.swift */,
-				C210F0701D8ADD0D00C742C2 /* ViewController.swift */,
 				C210F0721D8ADD0D00C742C2 /* Main.storyboard */,
 				C210F0751D8ADD0D00C742C2 /* Assets.xcassets */,
 				C210F0771D8ADD0D00C742C2 /* LaunchScreen.storyboard */,
 				C210F07A1D8ADD0D00C742C2 /* Info.plist */,
 			);
 			path = FriendlyChat;
+			sourceTree = "<group>";
+		};
+		C2D41E771D8AF5C500F42C88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C2D41E781D8AF5D400F42C88 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C210F0701D8ADD0D00C742C2 /* SignInVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C210F0711D8ADD0D00C742C2 /* ViewController.swift in Sources */,
+				C210F0711D8ADD0D00C742C2 /* SignInVC.swift in Sources */,
 				C210F06F1D8ADD0D00C742C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
