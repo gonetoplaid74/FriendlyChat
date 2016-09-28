@@ -10,4 +10,5 @@ target 'FriendlyChat' do
  pod 'Firebase/Auth'
  pod 'Firebase/Storage'
  pod 'Firebase/Core'
+ pod 'FBSDKLoginKit'
 end

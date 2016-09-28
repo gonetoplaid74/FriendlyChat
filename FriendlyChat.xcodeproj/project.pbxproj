@@ -44,6 +44,7 @@
 		C23E0F901D8B0299003E3CDD /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		C23E0F911D8B0299003E3CDD /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		C2919DED1D99774200BFD6B4 /* bottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bottomView.swift; sourceTree = "<group>"; };
+		C2D4124F1D9C1B120018BB7D /* FriendlyChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FriendlyChat.entitlements; sourceTree = "<group>"; };
 		C2D41E791D8AFDB500F42C88 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		C2D41E7B1D8AFE2A00F42C88 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +99,7 @@
 		C210F06D1D8ADD0D00C742C2 /* FriendlyChat */ = {
 			isa = PBXGroup;
 			children = (
+				C2D4124F1D9C1B120018BB7D /* FriendlyChat.entitlements */,
 				C2D41E781D8AF5D400F42C88 /* Controller */,
 				C2D41E771D8AF5C500F42C88 /* Model */,
 				C210F0801D8ADD6600C742C2 /* GoogleService-Info.plist */,
@@ -171,6 +173,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MNM3C2L7P4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -391,6 +398,7 @@
 			baseConfigurationReference = 3C562A7147BDB311AE22F4D8 /* Pods-FriendlyChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FriendlyChat/FriendlyChat.entitlements;
 				DEVELOPMENT_TEAM = MNM3C2L7P4;
 				INFOPLIST_FILE = FriendlyChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -405,6 +413,7 @@
 			baseConfigurationReference = 5E4637301E412CDD1464879E /* Pods-FriendlyChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FriendlyChat/FriendlyChat.entitlements;
 				DEVELOPMENT_TEAM = MNM3C2L7P4;
 				INFOPLIST_FILE = FriendlyChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
