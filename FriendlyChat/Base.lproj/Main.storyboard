@@ -138,11 +138,58 @@
                     <connections>
                         <outlet property="passwordField" destination="z9x-aN-xjT" id="Nws-1D-IWh"/>
                         <outlet property="usernameField" destination="UTP-Ct-dQs" id="bzm-7H-89Q"/>
+                        <segue destination="TKB-X1-kJH" kind="show" identifier="goToFeed" id="kP4-rn-aqy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="Ehk-qP-mtf">
+            <objects>
+                <viewController id="TKB-X1-kJH" customClass="FeedVC" customModule="FriendlyChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kki-Ml-17Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="aan-x8-TZW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FCU-8r-CrM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="logged in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48V-mB-ooK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="8a4-cj-3I0"/>
+                                    <constraint firstAttribute="height" constant="21" id="hDl-kT-0mO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQ4-Sa-bm3">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="1dT-8O-kaF"/>
+                                    <constraint firstAttribute="height" constant="30" id="gxv-eG-Rq8"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="logout:" destination="TKB-X1-kJH" eventType="touchUpInside" id="OGe-Ga-crV"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="9Oq-du-00Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aan-x8-TZW" firstAttribute="top" secondItem="qQ4-Sa-bm3" secondAttribute="bottom" constant="20" id="5Tu-9a-2ad"/>
+                            <constraint firstItem="48V-mB-ooK" firstAttribute="centerY" secondItem="FCU-8r-CrM" secondAttribute="centerY" id="aHz-T9-TLg"/>
+                            <constraint firstItem="qQ4-Sa-bm3" firstAttribute="trailing" secondItem="FCU-8r-CrM" secondAttribute="trailingMargin" constant="4" id="cgR-IS-QTq"/>
+                            <constraint firstItem="48V-mB-ooK" firstAttribute="centerX" secondItem="FCU-8r-CrM" secondAttribute="centerX" constant="6.5" id="if8-N3-yrR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AUJ-wV-H8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807.20000000000005" y="41.829085457271368"/>
         </scene>
     </scenes>
     <resources>

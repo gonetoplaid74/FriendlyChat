@@ -14,6 +14,7 @@
 		C210F0761D8ADD0D00C742C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C210F0751D8ADD0D00C742C2 /* Assets.xcassets */; };
 		C210F0791D8ADD0D00C742C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C210F0771D8ADD0D00C742C2 /* LaunchScreen.storyboard */; };
 		C210F0811D8ADD6600C742C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C210F0801D8ADD6600C742C2 /* GoogleService-Info.plist */; };
+		C22844931D9D713000CE1E97 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22844921D9D713000CE1E97 /* FeedVC.swift */; };
 		C23E0F8B1D8B00B6003E3CDD /* MaterialTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E0F8A1D8B00B6003E3CDD /* MaterialTextView.swift */; };
 		C23E0F8D1D8B014A003E3CDD /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E0F8C1D8B014A003E3CDD /* MaterialButton.swift */; };
 		C23E0F921D8B0299003E3CDD /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C23E0F8E1D8B0299003E3CDD /* NotoSans-Bold.ttf */; };
@@ -37,6 +38,7 @@
 		C210F0781D8ADD0D00C742C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C210F07A1D8ADD0D00C742C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C210F0801D8ADD6600C742C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C22844921D9D713000CE1E97 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		C23E0F8A1D8B00B6003E3CDD /* MaterialTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextView.swift; sourceTree = "<group>"; };
 		C23E0F8C1D8B014A003E3CDD /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 		C23E0F8E1D8B0299003E3CDD /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				C210F0701D8ADD0D00C742C2 /* SignInVC.swift */,
+				C22844921D9D713000CE1E97 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 					C210F06A1D8ADD0D00C742C2 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MNM3C2L7P4;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -274,6 +278,7 @@
 				C2919DEE1D99774200BFD6B4 /* bottomView.swift in Sources */,
 				C2D41E7A1D8AFDB500F42C88 /* MaterialView.swift in Sources */,
 				C23E0F8D1D8B014A003E3CDD /* MaterialButton.swift in Sources */,
+				C22844931D9D713000CE1E97 /* FeedVC.swift in Sources */,
 				C210F0711D8ADD0D00C742C2 /* SignInVC.swift in Sources */,
 				C210F06F1D8ADD0D00C742C2 /* AppDelegate.swift in Sources */,
 				C2D41E7C1D8AFE2A00F42C88 /* Constants.swift in Sources */,
