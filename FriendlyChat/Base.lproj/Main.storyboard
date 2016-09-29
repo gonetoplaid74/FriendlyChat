@@ -43,7 +43,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTl-HE-7ro" customClass="MaterialButton" customModule="FriendlyChat" customModuleProvider="target">
                                         <color key="backgroundColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,6 +54,9 @@
                                         <state key="normal" title="Sign in/ Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7O-SL-jie"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -132,6 +135,10 @@
                             <constraint firstItem="Ngl-eg-9Yo" firstAttribute="top" secondItem="spI-8z-nee" secondAttribute="bottom" id="yeK-56-bl4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="z9x-aN-xjT" id="Nws-1D-IWh"/>
+                        <outlet property="usernameField" destination="UTP-Ct-dQs" id="bzm-7H-89Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
