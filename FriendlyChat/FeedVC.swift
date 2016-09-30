@@ -18,8 +18,26 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-          }
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+
+           // if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                print(snapshot.value)
+//                for snap in snapshot{
+//                    print("snap \(snap)")
+//                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+//                        let key = snap.key
+//                        let post = Post(postKey: key, postData: postDict)
+//                        self.posts.append(post)
+                
+                  //  }
+                    
+         //   }
+         //   }
+        })
     
+    
+          
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -41,7 +59,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
        let keychainResult = KeychainWrapper.defaultKeychainWrapper().removeObjectForKey(KEY_UID)
         
-        print("ID remved from keychain \(keychainResult)")
+        print("ID removed from keychain \(keychainResult)")
         
         
         try! FIRAuth.auth()?.signOut()
