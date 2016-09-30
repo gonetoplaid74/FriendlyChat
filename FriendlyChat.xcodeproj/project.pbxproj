@@ -23,6 +23,8 @@
 		C23E0F951D8B0299003E3CDD /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C23E0F911D8B0299003E3CDD /* NotoSans-Regular.ttf */; };
 		C2919DEE1D99774200BFD6B4 /* bottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2919DED1D99774200BFD6B4 /* bottomView.swift */; };
 		C2C5A0501D9E64070050B4FF /* MaterialImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5A04F1D9E64070050B4FF /* MaterialImage.swift */; };
+		C2C5A0521D9E7C100050B4FF /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5A0511D9E7C100050B4FF /* PostCell.swift */; };
+		C2C5A0541D9E7EEC0050B4FF /* CircleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5A0531D9E7EEC0050B4FF /* CircleBtn.swift */; };
 		C2D41E7A1D8AFDB500F42C88 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D41E791D8AFDB500F42C88 /* MaterialView.swift */; };
 		C2D41E7C1D8AFE2A00F42C88 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D41E7B1D8AFE2A00F42C88 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +50,8 @@
 		C23E0F911D8B0299003E3CDD /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		C2919DED1D99774200BFD6B4 /* bottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bottomView.swift; sourceTree = "<group>"; };
 		C2C5A04F1D9E64070050B4FF /* MaterialImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialImage.swift; sourceTree = "<group>"; };
+		C2C5A0511D9E7C100050B4FF /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		C2C5A0531D9E7EEC0050B4FF /* CircleBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleBtn.swift; sourceTree = "<group>"; };
 		C2D4124F1D9C1B120018BB7D /* FriendlyChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FriendlyChat.entitlements; sourceTree = "<group>"; };
 		C2D41E791D8AFDB500F42C88 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		C2D41E7B1D8AFE2A00F42C88 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				C2D41E7B1D8AFE2A00F42C88 /* Constants.swift */,
 				C23E0F8A1D8B00B6003E3CDD /* MaterialTextView.swift */,
 				C23E0F8C1D8B014A003E3CDD /* MaterialButton.swift */,
+				C2C5A0511D9E7C100050B4FF /* PostCell.swift */,
+				C2C5A0531D9E7EEC0050B4FF /* CircleBtn.swift */,
 			);
 			path = FriendlyChat;
 			sourceTree = "<group>";
@@ -286,6 +292,8 @@
 				C2C5A0501D9E64070050B4FF /* MaterialImage.swift in Sources */,
 				C210F06F1D8ADD0D00C742C2 /* AppDelegate.swift in Sources */,
 				C2D41E7C1D8AFE2A00F42C88 /* Constants.swift in Sources */,
+				C2C5A0521D9E7C100050B4FF /* PostCell.swift in Sources */,
+				C2C5A0541D9E7EEC0050B4FF /* CircleBtn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
