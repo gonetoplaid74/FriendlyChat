@@ -25,6 +25,7 @@
 		C2C5A0501D9E64070050B4FF /* MaterialImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5A04F1D9E64070050B4FF /* MaterialImage.swift */; };
 		C2C5A0521D9E7C100050B4FF /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5A0511D9E7C100050B4FF /* PostCell.swift */; };
 		C2C5A0541D9E7EEC0050B4FF /* CircleBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5A0531D9E7EEC0050B4FF /* CircleBtn.swift */; };
+		C2C5A0571D9E8B4E0050B4FF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5A0561D9E8B4E0050B4FF /* DataService.swift */; };
 		C2D41E7A1D8AFDB500F42C88 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D41E791D8AFDB500F42C88 /* MaterialView.swift */; };
 		C2D41E7C1D8AFE2A00F42C88 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D41E7B1D8AFE2A00F42C88 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +53,7 @@
 		C2C5A04F1D9E64070050B4FF /* MaterialImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialImage.swift; sourceTree = "<group>"; };
 		C2C5A0511D9E7C100050B4FF /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		C2C5A0531D9E7EEC0050B4FF /* CircleBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleBtn.swift; sourceTree = "<group>"; };
-		C2D4124F1D9C1B120018BB7D /* FriendlyChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FriendlyChat.entitlements; sourceTree = "<group>"; };
+		C2C5A0561D9E8B4E0050B4FF /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		C2D41E791D8AFDB500F42C88 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		C2D41E7B1D8AFE2A00F42C88 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +108,7 @@
 		C210F06D1D8ADD0D00C742C2 /* FriendlyChat */ = {
 			isa = PBXGroup;
 			children = (
-				C2D4124F1D9C1B120018BB7D /* FriendlyChat.entitlements */,
+				C2C5A0551D9E8B420050B4FF /* Services */,
 				C2D41E781D8AF5D400F42C88 /* Controller */,
 				C2D41E771D8AF5C500F42C88 /* Model */,
 				C210F0801D8ADD6600C742C2 /* GoogleService-Info.plist */,
@@ -129,6 +130,14 @@
 				C2C5A0531D9E7EEC0050B4FF /* CircleBtn.swift */,
 			);
 			path = FriendlyChat;
+			sourceTree = "<group>";
+		};
+		C2C5A0551D9E8B420050B4FF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C2C5A0561D9E8B4E0050B4FF /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		C2D41E771D8AF5C500F42C88 /* Model */ = {
@@ -284,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C23E0F8B1D8B00B6003E3CDD /* MaterialTextView.swift in Sources */,
+				C2C5A0571D9E8B4E0050B4FF /* DataService.swift in Sources */,
 				C2919DEE1D99774200BFD6B4 /* bottomView.swift in Sources */,
 				C2D41E7A1D8AFDB500F42C88 /* MaterialView.swift in Sources */,
 				C23E0F8D1D8B014A003E3CDD /* MaterialButton.swift in Sources */,
@@ -340,6 +350,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Allan Wallace (MNM3C2L7P4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -389,6 +400,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Allan Wallace (MNM3C2L7P4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
