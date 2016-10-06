@@ -46,8 +46,8 @@ class Post{
             self._caption = caption
         }
         
-        if let imageUrl = postData["imageURL"] as? String {
-            self._imageURL = imageUrl
+        if let imageURL = postData["imageURL"] as? String {
+            self._imageURL = imageURL
         }
         
         if let likes = postData["Likes"] as? Int {

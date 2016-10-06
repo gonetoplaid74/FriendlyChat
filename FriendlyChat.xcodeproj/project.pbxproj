@@ -89,6 +89,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C20894131DA66F2B00EA7FBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2D41E791D8AFDB500F42C88 /* MaterialView.swift */,
+				C2C5A04F1D9E64070050B4FF /* MaterialImage.swift */,
+				C23E0F8C1D8B014A003E3CDD /* MaterialButton.swift */,
+				C23E0F8A1D8B00B6003E3CDD /* MaterialTextView.swift */,
+				C2C5A0531D9E7EEC0050B4FF /* CircleBtn.swift */,
+				C2919DED1D99774200BFD6B4 /* bottomView.swift */,
+				C2C5A0511D9E7C100050B4FF /* PostCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C20894141DA66F6900EA7FBB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C2D41E7B1D8AFE2A00F42C88 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		C210F0621D8ADD0D00C742C2 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +132,8 @@
 		C210F06D1D8ADD0D00C742C2 /* FriendlyChat */ = {
 			isa = PBXGroup;
 			children = (
+				C20894141DA66F6900EA7FBB /* Util */,
+				C20894131DA66F2B00EA7FBB /* View */,
 				C2C5A0551D9E8B420050B4FF /* Services */,
 				C2D41E781D8AF5D400F42C88 /* Controller */,
 				C2D41E771D8AF5C500F42C88 /* Model */,
@@ -123,14 +147,6 @@
 				C210F0751D8ADD0D00C742C2 /* Assets.xcassets */,
 				C210F0771D8ADD0D00C742C2 /* LaunchScreen.storyboard */,
 				C210F07A1D8ADD0D00C742C2 /* Info.plist */,
-				C2D41E791D8AFDB500F42C88 /* MaterialView.swift */,
-				C2C5A04F1D9E64070050B4FF /* MaterialImage.swift */,
-				C2D41E7B1D8AFE2A00F42C88 /* Constants.swift */,
-				C23E0F8A1D8B00B6003E3CDD /* MaterialTextView.swift */,
-				C23E0F8C1D8B014A003E3CDD /* MaterialButton.swift */,
-				C2C5A0511D9E7C100050B4FF /* PostCell.swift */,
-				C2C5A0531D9E7EEC0050B4FF /* CircleBtn.swift */,
-				C2919DED1D99774200BFD6B4 /* bottomView.swift */,
 			);
 			path = FriendlyChat;
 			sourceTree = "<group>";
