@@ -39,7 +39,7 @@ class DataService {
         return _REF_USERS
     }
     
-    var REF_POST_IAMGES: FIRStorageReference{
+    var REF_POST_IMAGES: FIRStorageReference{
         return _REF_POST_IMAGES
     }
     

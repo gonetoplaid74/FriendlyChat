@@ -217,6 +217,9 @@
                                                     <constraint firstAttribute="height" constant="50" id="GDQ-Me-lS3"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postBtnTapped:" destination="TKB-X1-kJH" eventType="touchUpInside" id="iqz-uO-oRf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -259,8 +262,8 @@
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="kUu-cK-FbU">
                                                                             <constraints>
-                                                                                <constraint firstAttribute="height" constant="60" id="ate-uT-pOE"/>
-                                                                                <constraint firstAttribute="width" constant="60" id="uI4-wN-eBZ"/>
+                                                                                <constraint firstAttribute="height" constant="50" id="ate-uT-pOE"/>
+                                                                                <constraint firstAttribute="width" constant="50" id="uI4-wN-eBZ"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                     </subviews>
@@ -340,6 +343,7 @@
                     </view>
                     <connections>
                         <outlet property="addImage" destination="Kup-Ar-gTE" id="anB-0I-mfr"/>
+                        <outlet property="captionField" destination="8Cy-BJ-Edj" id="bbJ-Fg-DQv"/>
                         <outlet property="tableView" destination="UfF-wg-Hst" id="QFC-7P-g4Y"/>
                     </connections>
                 </viewController>

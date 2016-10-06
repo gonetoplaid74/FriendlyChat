@@ -16,10 +16,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImage: MaterialImage!
+    @IBOutlet weak var captionField: TextField!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
+    
     
     
     
@@ -34,7 +37,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
         imagePicker.delegate = self
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
-
+           
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
                     print("SNAP: \(snap)")
@@ -67,11 +70,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
         
     if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
         
-            if let img = FeedVC.imageCache.object(forKey: post.imageURL as NSString) {
+        if let img = FeedVC.imageCache.object(forKey: post.imageURL as NSString){
                 cell.configureCell(post: post, img: img)
                 return cell
             } else {
-            cell.configureCell(post: post)
+            cell.configureCell(post: post, img: nil)
             return cell
         }
         } else {
@@ -87,6 +90,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
 
          addImage.image = image
+            imageSelected = true
         } else {
             print(" a valid image wasn't selected .......................")
             
@@ -109,6 +113,35 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
         
         
         try! FIRAuth.auth()?.signOut()
-        
     }
+    
+        @IBAction func postBtnTapped(_ sender: AnyObject) {
+            guard let caption = captionField.text, caption != "" else {
+                print(" caption must be entered .............")
+                return
+            }
+            let img = addImage.image!
+            if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+                
+                let imgUid = NSUUID().uuidString
+                let metadata = FIRStorageMetadata()
+                metadata.contentType = "image/jpeg"
+                
+                DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metadata) { (metadata, error) in
+                    if error != nil {
+                        print(" there is an error , unable to upload image to Firebase storage ..............")
+                        
+                    } else {
+                        print(" sucessfully loaded image to Firebase Stoage ........................")
+                        let downloadURL = metadata?.downloadURL()?.absoluteString
+                        
+                        
+                    }
+                
+            
+            }
+        }
+
+    }
+    
 }
