@@ -52,16 +52,18 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
     
     
           
-    }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return posts.count
-        
-    }
+    
+        }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+        return posts.count
+    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,8 +77,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
                 return cell
             } else {
             cell.configureCell(post: post, img: nil)
-            return cell
         }
+            return cell
+        
         } else {
             return PostCell()
         }
@@ -134,7 +137,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
                     } else {
                         print(" sucessfully loaded image to Firebase Stoage ........................")
                         let downloadURL = metadata?.downloadURL()?.absoluteString
-                        
+                        if let url = downloadURL {
+                        self.postToFirebase(imgUrl: url)
                         
                     }
                 
@@ -142,6 +146,26 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
             }
         }
 
+            }
+    }
+    
+    func postToFirebase(imgUrl: String) {
+        let post: Dictionary<String, Any> = [
+        "Caption": captionField.text!,
+        "imageURL": imgUrl,
+        "Likes": 0
+    ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        captionField.text = ""
+        //imagedSelected = false
+        addImage.image = UIImage(named: "add-image")
+        
+        self.tableView.reloadData()
+        
+        
     }
     
 }
