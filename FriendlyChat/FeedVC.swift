@@ -17,7 +17,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImage: MaterialImage!
     @IBOutlet weak var captionField: TextField!
-    
+        
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
@@ -37,6 +37,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
         imagePicker.delegate = self
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            self.posts = []
            
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
@@ -45,6 +46,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
                         let key = snap.key
                         let post = Post(postID: key, postData: postDict)
                         self.posts.append(post)
+                        
                     }
                 }
             }
@@ -62,32 +64,31 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UINa
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
+        
         return posts.count
+        
+        
     
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
         let post = posts[indexPath.row]
         
-    if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-        
-        if let img = FeedVC.imageCache.object(forKey: post.imageURL as NSString){
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
+            
+            if let img = FeedVC.imageCache.object(forKey: post.imageURL as NSString) {
                 cell.configureCell(post: post, img: img)
-                return cell
             } else {
-            cell.configureCell(post: post, img: nil)
-        }
-            return cell
-        
-        } else {
+                cell.configureCell(post: post)
+            }
+           return cell
+       } else {
             return PostCell()
         }
-        
-    
-    
-        
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
